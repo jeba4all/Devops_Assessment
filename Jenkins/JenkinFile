@@ -65,7 +65,7 @@ node{
   stage('create mediawiki docker image'){
 
          sh '''
-            cd $WORKSPACE/poc/MediaWIKI
+            cd $WORKSPACE/poc/MediaWIKI_Dev
             docker build  -t mediawiki:$BUILD_ID .
             docker tag mediawiki:$BUILD_ID ajai_poc/mediawiki:$BUILD_ID
             docker push ajai_poc/mediawiki:$BUILD_ID
